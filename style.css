@@ -101,12 +101,12 @@ h1 {
     width: 45%;
     background-color: rgba(52, 52, 52, 0.212);
     padding: 20px;
-    margin-top: 200px;
+    margin-top: 100px;
     border-radius: 20px 50px;
   }
 
   .box:hover {
-    border-radius: 2px 2px;
+    background-color: rgba(127, 127, 127, 0.212);
   }
   
   label {
@@ -132,9 +132,216 @@ h1 {
   #password-container {
     margin-top: 20px;
     color:white;
-    border: black solid 0.1px;
     text-align: center;
   }
+  #password-length {
+    background-color: #373737;
+    width:50%;
+  }
+
   #password-container:hover {
+    background-color:rgba(127, 127, 127, 0.212);
+  }
+
+  .btn {
+    
+    display: inline;
+    width:20%;
+    height:50px;
+    background-color:#373737;
+    border: 0px solid black;
+    color: white;
+    border-radius: 30px;
+    margin-top:45px;
+  }
+  .btn:hover {
+    background-color:#c6c6c6;
+    color: rgb(0, 0, 0);
+  }
+
+  .btn:disabled {
+    background-color:#373737b8;
+    color: rgba(255, 255, 255, 0.568);
+  }
+
+  #header {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width:100%;
+    height:75px;
+  }
+
+  #login_btn {
+    border-radius: 20px;
+    border: 0px;
+    width: 20%;
+    height: 45px;
+    background-color: #575757; 
+    color: white;
+  }
+
+  #close_btn {
+    
+    border-radius: 20px;
+    border: 0px;
+    width: 25%;
+    height: 45px;
+    background-color: #fb3737; 
+    color: white;
+  }
+
+  .field {
+
+    border-radius: 7px;
+    border: 0px;
+    width: 30%;
+    height: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #login_page {
+
+    display: none;
+    width: 50%;
+    height: 80%;
+    background-color: #1c1c1cf5;
+    margin-left: 13%;
+    z-index: 10;
+    position: absolute;
+    top: 9%;
+    left: 13%;
+    border-radius: 50px;
+  }
+
+  #open_login {
+    position: relative;
+    left: 68%;
+    border-radius:50px;
+    width:3%;
+    background-color:#ddd;
+    border: 0px;
+  }
+  
+  #passwords {
+    position: relative;
+    left: 26%;
+    border-radius:50px;
+    width:3%;
+    background-color:#ea6e6e;
+    border: 0px;
+  }
+
+  #pass_label {
+    width: 15%;
+    height:30px;
+    padding: 10px;
     background-color:rgba(52, 52, 52, 0.212);
+    border: 1px solid rgb(111, 111, 111);
+    border-radius: 10px;
+    color:white;
+  }
+  
+  .slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #2f3a36;
+    cursor: pointer;
+  }
+
+  #snackbar {
+    
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    background-color: #333333ee; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 40px;
+    padding-left: 40px;
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 40%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+    border-radius: 30px;
+  }
+  
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+  #snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+  #footer {
+    background-color: #0000001c;
+  }
+
+  #footer:hover {
+    background-color: #7272721c;
+  }
+
+  #footer-txt {
+    color:white;
+  }
+
+  ::selection {
+    color:black;
+    background-color: white;
   }
